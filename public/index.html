@@ -8,19 +8,22 @@
 </head>
 <body>
     <p> Welcome to This Chat App</p>
+
+
+    <ol id='messages'></ol>
+
+    <form id='message-form'>
+        <input name='message' type='text' placeholder='message'/>
+        <button>send</button>
+    </form>
+
+    <button id='send-location'>send location</button>
     
-
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script src="/socket.io/socket.io.js"></script>
-    <script>
-        let socket = io();
-
-        socket.on('connect', () => {
-            console.log('connected to the server');
-        });
-
-        socket.on('disconnect', () => {
-            console.log('disconnected from the server');
-        });
-    </script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
